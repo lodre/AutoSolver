@@ -1,0 +1,55 @@
+name = "SimpleAutoSolverExample"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["Test1", "Test2", "Test4", "Test6"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+
+[[lean_lib]]
+name = "AutoSolver"
+srcDir = "AutoSolver/"
+
+[[lean_lib]]
+name = "Test1"
+srcDir = "Tests/"
+packagesDir = "Tests/"
+
+[[lean_lib]]
+name = "Test2"
+srcDir = "Tests/"
+packagesDir = "Tests/"
+
+[[lean_lib]]
+name = "Test4"
+srcDir = "Tests/"
+packagesDir = "Tests/"
+
+[[lean_lib]]
+name = "Test6"
+srcDir = "Tests/"
+packagesDir = "Tests/"
+
+
+[[lean_lib]]
+name = "geolin_prob_lin_space_6_1"
+srcDir = "Tests/"
+
+
+[[lean_lib]]
+name = "geolin_prob_lin_space_1_2"
+srcDir = "Tests/"
+
+[[lean_lib]]
+name = "geolin_prob_lin_space_2_2"
+srcDir = "Tests/"
+
+[[lean_lib]]
+name = "geolin_prob_lin_space_4_3"
+srcDir = "Tests/"
+
