@@ -27,7 +27,7 @@ variable (x1 x2 x3 : ℚ)
 
 -- Проверка, что переход в новый базис правильный
 @[simp] theorem transformation_matrix_theorem: ![e1' e1 e3, e2' e1 e2, e3' e1 e3] = Matrix.vecMul ![e1, e2, e3] transformation_matrix := by
-  tact_matr_mul_vec
+  auto_solver
 
 
 -- Проверка, что матрицы взаимнообратные
