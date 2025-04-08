@@ -15,5 +15,8 @@ import AutoSolver
 @[simp] def x3: ℚ := -19/24
 
 
-theorem correctness: List.foldl (List.zipWith (.+.)) (List.map (x1 * .) e_1) [(List.map (x2 * .) e_2), (List.map (x3 * .) e_3)] = x := by
+theorem correctness_of_system: 5 * x1 + 5 * x2 - x3 = 6 ∧ -x2 = 2 ∧ 4 * x1 + 4 * x3 = 9 := by
+    auto_solver
+
+theorem correctness_of_answer: List.foldl (List.zipWith (.+.)) (List.map (x1 * .) e_1) [(List.map (x2 * .) e_2), (List.map (x3 * .) e_3)] = x := by
     auto_solver
